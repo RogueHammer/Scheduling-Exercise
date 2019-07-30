@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=rng\ lowerBound\ upperBound
+comment0.target=CPUGenerator(BoundedExpRNG,\ int,\ int)
+comment1.params=
+comment1.target=simulator.CPUInstruction\ make()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

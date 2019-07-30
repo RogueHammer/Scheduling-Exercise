@@ -1,0 +1,75 @@
+# Program name: test9.prg
+# CPU Generator (lambda=10.0, lower_bound=1, upper_bound=20)
+# IO (lambda=2.0, lower_bound=500, upper_bound=2000, devices=[1, 2])
+# THEN
+# CPU Generator (lambda=3.0, lower_bound=675, upper_bound=3400)
+# IO (lambda=1.0, lower_bound=1, upper_bound=34, devices=[1, 2, 3])
+CPU 1
+IO 683 2
+CPU 4
+IO 518 1
+CPU 2
+IO 573 2
+CPU 2
+IO 1024 1
+CPU 3
+IO 655 1
+CPU 2
+IO 1223 2
+CPU 1
+IO 1219 2
+CPU 1
+IO 1669 2
+CPU 1
+IO 888 2
+CPU 1
+IO 1780 2
+CPU 2
+IO 1147 2
+CPU 2
+IO 730 2
+CPU 3
+IO 1145 2
+CPU 857
+IO 16 1
+CPU 1005
+IO 26 1
+CPU 1801
+IO 20 3
+CPU 3048
+IO 2 3
+CPU 1852
+IO 17 3
+CPU 2211
+IO 25 2
+CPU 1074
+IO 33 1
+CPU 957
+IO 7 2
+CPU 730
+IO 2 2
+CPU 1133
+IO 15 1
+CPU 1387
+IO 25 2
+CPU 897
+IO 25 1
+CPU 1211
+IO 21 3
+CPU 1440
+IO 30 1
+CPU 964
+IO 12 2
+CPU 1159
+IO 34 3
+CPU 982
+IO 3 3
+CPU 2243
+IO 5 1
+CPU 1302
+IO 5 2
+CPU 784
+IO 23 3
+CPU 2009
+IO 3 2
+CPU 965

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=lambda
+comment0.target=ExpRNG(double)
+comment1.params=
+comment1.target=double\ next()
+comment2.params=scale
+comment2.target=int\ nextInt(int)
+comment3.params=
+comment3.target=double\ getLambda()
+numComments=4

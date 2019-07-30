@@ -1,0 +1,56 @@
+# Program name: cpubound1.prg
+# CPU Generator (lambda=2.0, lower_bound=500, upper_bound=700)
+# IO (lambda=3.0, lower_bound=12, upper_bound=120, devices=[1, 2])
+CPU 543
+IO 81 1
+CPU 557
+IO 31 1
+CPU 597
+IO 28 2
+CPU 516
+IO 86 1
+CPU 593
+IO 18 2
+CPU 545
+IO 14 1
+CPU 620
+IO 49 2
+CPU 540
+IO 25 2
+CPU 510
+IO 23 1
+CPU 582
+IO 46 2
+CPU 540
+IO 35 1
+CPU 559
+IO 17 2
+CPU 545
+IO 109 2
+CPU 617
+IO 27 2
+CPU 672
+IO 97 1
+CPU 564
+IO 15 2
+CPU 577
+IO 19 1
+CPU 510
+IO 35 2
+CPU 557
+IO 54 2
+CPU 531
+IO 54 1
+CPU 696
+IO 25 2
+CPU 556
+IO 34 1
+CPU 653
+IO 87 2
+CPU 572
+IO 39 2
+CPU 623
+IO 40 2
+CPU 625
+IO 15 2
+CPU 619

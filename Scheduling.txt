@@ -1,0 +1,61 @@
+#For CSC3002F - OS Assingmnet 1
+MRXSTE008 - Steven Mare
+
+#2.2 FCFS Convoy
+The convoy effect is when a large process is utilizing the CPU causing other processes to wait, thus causing a backlog and under utilization of resources.
+
+The convoy effect is demonstrated by the creation of 9 test programs.
+The first 8 have considerably small CPU bursts (between 1 - 30) but with large IO bursts (500-5000)
+The 9th program starts the same as the others then switches to a CPU bound program instead. (cpu burst of 700-3100 and IO bursts of 1-35)
+
+What can be seen from monitoring interrupt and syscall traces is that when test9.prg finishes with an IO request and goes back to the CPU process queue, 
+multiple other programs will also finish IO requests before test9.prg finishes on the CPU and goes its next IO request.
+This causes a convoy effect on the CPU.
+
+A sample can be seen before where test2.prg, test8.prg, test3.prg and test5.prg are all in the queue for the CPU, wiaitng for test9.prg to finish.  
+
+Time: 0000076636 Kernel: Interrupt(WAKE_UP, device(id=1), process(pid=2, state=WAITING, name="ConvoyTest/test9.prg"))
+Time: 0000076962 Kernel: Interrupt(WAKE_UP, device(id=2), process(pid=3, state=WAITING, name="ConvoyTest/test2.prg"))
+Time: 0000077391 Kernel: Interrupt(WAKE_UP, device(id=2), process(pid=9, state=WAITING, name="ConvoyTest/test8.prg"))
+Time: 0000077844 Kernel: Interrupt(WAKE_UP, device(id=3), process(pid=4, state=WAITING, name="ConvoyTest/test3.prg"))
+Time: 0000078055 Kernel: Interrupt(WAKE_UP, device(id=2), process(pid=6, state=WAITING, name="ConvoyTest/test5.prg"))
+Time: 0000078445 Kernel: SysCall(IO_REQUEST, device(id=3), duration=20, process(pid=2, state=RUNNING, name="ConvoyTest/test9.prg"))
+
+#2.4 Round-Robin rule of thumb
+I decided to run to Thumb tests will different samples to coroborate my findings:
+
+Thumb1:
+To test the rule of thumb 11 sample programs were made.
+3 were IO bound, 3 were CPU bound and 5 were balanced programs with the following burst times used:
+IO bound 1-3 - cpu 1-30, io 500-3000
+CPU bound 1 - cpu 500-700, io 1-30 
+CPU bound 2 - cpu 1000-2000, io 1-30 
+CPU bound 3 - cpu 2000-3000, io 1-30 
+balanced 1-5 - cpu 100-500, io 100-500
+
+Test were run with different slice times running from 30 up to 3000.
+At around time slices of 1200 the System Time plateued at just under 103250 while the CPU utilization plateued at 99.00.
+Beyond this, increments in time slice time only saw marginal improvement in System Time and CPU Utilization.
+9 of the 11 tests have cpu bursts times below 1200 while 2 tests have cpu bursts times equal to or greater than 1200.
+
+Thumb2:
+To test the rule of thumb 10 sample programs were made.
+3 were IO bound, 3 were CPU bound and 4 were balanced programs with the following burst times used:
+IO bound 1 - cpu 1-3, io 20-30
+IO bound 2 - cpu 1-5, io 30-40
+IO bound 3 - cpu 1-7, io 40-50
+CPU bound 1 - cpu 20-30, io 1-5 
+CPU bound 2 - cpu 30-40, io 1-7 
+CPU bound 3 - cpu 40-50, io 1-10 
+balanced 1-4 - cpu 10-20, io 10-20
+
+Test were run with different slice times running from 5 up to 50.
+At around time slices of 35 the System Time plateued at around 2770 while the CPU utilization plateued at 73.4.
+Beyond this, increments in time slice time only saw marginal improvement in System Time and CPU Utilization.
+8 of the 10 tests have cpu bursts times below 35 while 2 tests have cpu bursts times equal to or greater than 35.
+
+
+Thus from these two tests, it is a close approximation that 80% of the cpu bursts being shorter than the time slice will give us optimum results.
+
+
+

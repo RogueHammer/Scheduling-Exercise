@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=name\ cpuGen\ ioGen\ numInstructions
+comment0.target=ProgramGenerator(java.lang.String,\ CPUGenerator,\ IOGenerator,\ int)
+comment0.text=\r\n\ @Param\ numInstructions\ -\ an\ odd\ number\ integer.\r\n
+comment1.params=
+comment1.target=int\ getTotalTime()
+comment2.params=
+comment2.target=int\ getSize()
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=instGen
+comment4.target=void\ make(InstructionGenerator)
+comment5.params=
+comment5.target=void\ make()
+comment6.params=
+comment6.target=java.util.List\ getText()
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8

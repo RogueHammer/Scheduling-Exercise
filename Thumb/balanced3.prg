@@ -1,0 +1,44 @@
+# Program name: balanced3.prg
+# CPU Generator (lambda=3.0, lower_bound=100, upper_bound=500)
+# IO (lambda=3.0, lower_bound=100, upper_bound=500, devices=[1, 2])
+CPU 401
+IO 302 1
+CPU 151
+IO 160 2
+CPU 160
+IO 186 2
+CPU 149
+IO 425 1
+CPU 177
+IO 135 1
+CPU 162
+IO 165 2
+CPU 325
+IO 234 1
+CPU 160
+IO 107 1
+CPU 139
+IO 197 1
+CPU 246
+IO 270 1
+CPU 175
+IO 131 2
+CPU 283
+IO 111 1
+CPU 169
+IO 207 2
+CPU 180
+IO 358 2
+CPU 191
+IO 140 2
+CPU 223
+IO 320 2
+CPU 306
+IO 207 1
+CPU 101
+IO 211 2
+CPU 106
+IO 360 1
+CPU 475
+IO 165 2
+CPU 130
